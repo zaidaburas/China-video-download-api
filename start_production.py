@@ -33,7 +33,7 @@ class ProductionServerConfig:
     def __init__(self):
         # 基础配置
         self.host = os.getenv("HOST", "0.0.0.0")
-        self.port = int(os.getenv("PORT", 8001))
+        self.port = int(8000)#os.getenv("PORT", 8001))
         
         # 性能和稳定性配置
         self.workers = int(os.getenv("WORKERS", 1))  # 单进程避免复杂性
